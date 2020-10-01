@@ -24,6 +24,7 @@ public class CupomFiscal {
 		}
 
 		String _logradouro = loja.getLogradouro()+ ", ";
+		
 		String _numero = "0";
 
 		if (loja.getNumero() == 0){
@@ -57,7 +58,7 @@ public class CupomFiscal {
 	 	if (!_cep.isEmpty() && !_telefone.isEmpty()){
 			_telefone = " Tel " + loja.getTelefone();
 		}
-
+		
 		String _observacao = checker(loja.getObservacao()) == false ? "" : loja.getObservacao();
 
 		if (checker(loja.getCnpj()) == false){
