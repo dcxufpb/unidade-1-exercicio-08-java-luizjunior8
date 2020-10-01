@@ -215,24 +215,30 @@ public class TestCupomFiscal {
 	@Test
 	public void exercicio02_Customizado() {
 		// Defina seus próprios valores para as variáveis a seguir
-		String nomeLoja = "";
-		String logradouro = "";
-		int numero = 0;
-		String complemento = "";
-		String bairro = "";
-		String municipio = "";
-		String estado = "";
-		String cep = "";
-		String telefone = "";
-		String observacao = "";
-		String cnpj = "";
-		String inscricaoEstadual = "";
+		String nomeLoja = "Jr Tech";
+		String logradouro = "Rua Geraldo Correia de Melo";
+		int numero = 100;
+		String complemento = "Casa";
+		String bairro = "Centro";
+		String municipio = "Araçagi";
+		String estado = "PB";
+		String cep = "58270-000";
+		String telefone = "(83) 98111-2697";
+		String observacao = "Matriz";
+		String cnpj = "66.651.293/0001-85";
+		String inscricaoEstadual = "222.333.444.555";
 
 		Loja lojaCustomizada = new Loja(nomeLoja, logradouro, numero, complemento, bairro, municipio, estado, cep,
 				telefone, observacao, cnpj, inscricaoEstadual);
 
 		// E atualize o texto esperado abaixo
-		rodarTestarRetorno("" + BREAK, lojaCustomizada);
+		rodarTestarRetorno("Jr Tech" + BREAK + 
+		"Rua Geraldo Correia de Melo, 100 Casa" + BREAK + 
+		"Centro - Araçagi - PB" + BREAK + 
+		"CEP:58270-000 Tel (83) 98111-2697" + BREAK + 
+		"Matriz" + BREAK + 
+		"CNPJ: 66.651.293/0001-85" + BREAK + 
+		"IE: 222.333.444.555" + BREAK, lojaCustomizada);
 	}
 
 	private void rodarTestarRetorno(String expected, Loja loja) {
